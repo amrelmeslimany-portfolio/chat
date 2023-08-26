@@ -37,7 +37,7 @@ const Users = () => {
       <SwirchUsers />
 
       {status === STATUS.loading && <NormalLoading />}
-      {status === STATUS.error && <p>{error}</p>}
+      {status === STATUS.error && <Result status="error" subTitle={error} />}
 
       {status === STATUS.success && (
         <>
