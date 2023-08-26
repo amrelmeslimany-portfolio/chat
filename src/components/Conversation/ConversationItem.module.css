@@ -1,0 +1,25 @@
+.parentconvitem {
+  padding-inline: 10px !important;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #333740;
+}
+
+.graytext {
+  color: #adb2bfb6;
+}
+
+.time {
+  margin: 0;
+}
+
+.youcolor {
+  color: goldenrod;
+}

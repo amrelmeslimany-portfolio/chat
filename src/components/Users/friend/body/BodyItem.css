@@ -1,0 +1,12 @@
+.itemparent {
+  width: 100%;
+  box-shadow: none !important;
+  background-color: white;
+}
+
+.itemparent .staticstyle .ant-statistic-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-transform: capitalize;
+}

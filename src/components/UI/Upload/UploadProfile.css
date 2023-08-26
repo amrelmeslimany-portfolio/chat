@@ -1,0 +1,33 @@
+.uploadprofile.center .ant-upload-wrapper {
+  text-align: center;
+}
+.uploadprofile .ant-upload.ant-upload-select {
+  width: 160px !important;
+  height: 160px !important;
+  overflow: hidden;
+}
+
+.uploadprofile .temp-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.uploadprofile .temp-image.default {
+  filter: blur(2px);
+}
+
+.uploadprofile .ant-avatar {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.dark-theme .uploadprofile .ant-avatar {
+  background-color: #131313;
+}
+.uploadprofile .ant-avatar .uploadimg-icon {
+  font-size: 60px;
+  color: #6b8bfd6a;
+}

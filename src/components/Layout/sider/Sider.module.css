@@ -1,0 +1,33 @@
+.ant_layout_sider {
+  text-align: center;
+  background-color: transparent !important;
+  padding-block: 0.8rem;
+  min-height: calc(100vh - 78px);
+}
+
+.profile_img {
+  margin-bottom: 0.8rem;
+  border: 1px solid #333740;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.174);
+  }
+}
+
+.themain_logo {
+  text-align: center;
+  width: 100%;
+  gap: 15px !important;
+}
+
+.darkmode {
+  width: 10px;
+  height: 16px;
+}
+
+.lightmode {
+  width: 10px;
+  margin-top: -4px;
+  height: 16px;
+}

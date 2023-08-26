@@ -1,0 +1,11 @@
+:host {
+  height: 270px;
+}
+
+.popover-emoji .ant-popover-inner {
+  padding: 0;
+}
+
+.emoji-btn {
+  border: none;
+}

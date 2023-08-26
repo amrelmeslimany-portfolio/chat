@@ -1,0 +1,47 @@
+.profile-header .cover {
+  height: 246px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  filter: blur(0.7px);
+}
+
+.profile-header .ant-space {
+  width: 100%;
+}
+.profile-header .ant-space .wrapinfo {
+  padding: 10px 10px;
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+.profile-header .ant-space .wrapinfo .infos h3.ant-typography {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.profile-header .ant-space .ant-space-item:nth-of-type(1) {
+  flex: 1;
+}
+.profile-header .ant-space .ant-space-item:nth-of-type(2) {
+  align-self: start;
+  margin-top: 20px;
+}
+
+.profile-header .ant-avatar {
+  margin-top: -65px;
+  height: 165px;
+  width: 165px;
+}
+.profile-header .ant-tag {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .profile-header .ant-space .wrapinfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -48px;
+  }
+}

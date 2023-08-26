@@ -1,0 +1,13 @@
+.useritem {
+  padding-inline: 10px !important;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.useritem .ant-avatar {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #333740;
+}

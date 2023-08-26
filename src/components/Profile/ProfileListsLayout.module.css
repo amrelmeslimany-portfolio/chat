@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .listCardWrapper {
+    width: 49%;
+  }
+}
+
+@media (max-width: 576px) {
+  .listCardWrapper {
+    width: 100%;
+  }
+}

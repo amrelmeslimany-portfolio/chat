@@ -1,0 +1,46 @@
+.profileWrapp {
+  display: flex;
+
+  & .infowrap {
+    flex: 1;
+  }
+
+  & .listsWrapp {
+    width: 350px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .profileWrapp {
+    & .listsWrapp {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profileWrapp {
+    flex-direction: column;
+    gap: 15px;
+
+    & .listsWrapp {
+      padding-left: 0;
+      width: 100%;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .profileWrapp {
+    & .listsWrapp {
+      padding-left: 0;
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}

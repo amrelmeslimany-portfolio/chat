@@ -1,0 +1,27 @@
+.auth_layout {
+  display: flex;
+  height: 100vh;
+}
+
+.imgcover {
+  height: 100%;
+  flex: 2;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 992px) {
+  .imgcover {
+    flex: 1 0 0;
+  }
+}
+@media (max-width: 640px) {
+  .imgcover {
+    flex: 0;
+  }
+}

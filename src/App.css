@@ -1,0 +1,103 @@
+.dark-theme {
+  background-color: #131313;
+  height: 100%;
+  width: 100%;
+}
+
+.nodark,
+.nodark img {
+  filter: brightness(1) !important;
+}
+
+.dark-theme img:not(.nodark) {
+  filter: brightness(0.7);
+}
+
+.dark-theme .ant-input-affix-wrapper,
+.dark-theme .ant-picker,
+.dark-theme .ant-input,
+.dark-theme .ant-select-selector,
+.dark-theme .bgcolor {
+  background-color: #131313 !important;
+}
+
+.ant-input-affix-wrapper,
+.ant-picker,
+.ant-input,
+.ant-select-selector,
+.bgcolor {
+  background-color: white !important;
+}
+.ant-input-affix-wrapper .ant-input {
+  background-color: transparent !important;
+}
+.ant-modal-confirm-btns .ant-btn {
+  box-shadow: none;
+}
+.ant-steps-icon .anticon-check {
+  color: white;
+}
+
+.ant-typography {
+  margin-top: 0;
+}
+
+.ant-dropdown-menu-item-icon {
+  font-size: 15px !important;
+}
+
+.ant-form-item-explain-error {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+:where(.css-dev-only-do-not-override-vgtgr4).ant-form-item
+  .ant-form-item-label {
+  text-align: start;
+  margin-inline-start: 5px;
+}
+
+/* .ant-list-item {
+  border-bottom: none !important;
+} */
+.ant-list-item .ant-list-item-meta-content {
+  align-self: center;
+}
+
+.ant-list-item-meta-title {
+  text-transform: capitalize;
+}
+
+.ant-alert {
+  margin-block: 10px;
+}
+
+.ant-badge-dot {
+  width: 8px !important;
+  min-width: 8px !important;
+  height: 8px !important;
+}
+
+.ant-segmented-item.ant-segmented-item-selected .ant-segmented-item-label {
+  color: white;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.ant-tag {
+  margin-right: 0;
+}
+
+.textGray {
+  color: #adb2bfb6;
+}
+
+.txtcenter {
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+.conversationheader {
+  width: 100%;
+  border-bottom: 1px solid #adb2bf35;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+
+  & .information {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    & .avatar {
+      width: 42px;
+      height: 42px;
+      border: 1px solid #adb2bf35;
+      border-radius: 50%;
+    }
+
+    & .header {
+      text-transform: capitalize;
+      margin-bottom: 2px;
+    }
+    & .text {
+      font-size: 12px;
+    }
+  }
+}
+
+.cursorpointer {
+  cursor: pointer;
+}

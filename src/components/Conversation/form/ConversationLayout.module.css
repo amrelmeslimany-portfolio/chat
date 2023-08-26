@@ -1,0 +1,15 @@
+.conversationwrapper {
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+}
+
+.mobilescreenConversation {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.result {
+  margin-top: 8%;
+}

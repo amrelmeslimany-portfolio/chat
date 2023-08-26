@@ -1,0 +1,103 @@
+:root {
+  --light-bg: #f0f2ff;
+  --dark-bg: #1b1e25;
+}
+
+.message {
+  display: flex;
+  gap: 15px;
+}
+
+.message:first-of-type {
+  margin-top: 15px;
+}
+
+.message:last-of-type {
+  margin-bottom: 5px;
+}
+
+.message.mymessage {
+  flex-direction: row-reverse;
+}
+
+.message .avatar {
+  border: 1px solid rgba(128, 128, 128, 0.412);
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+.message .messagecontainer {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 320px;
+  position: relative;
+  background-color: var(--light-bg);
+}
+.message.samePersonMessage .messagecontainer {
+  margin-inline-start: 48px;
+}
+.message.mymessage.samePersonMessage .messagecontainer {
+  margin-inline-end: 48px;
+}
+.mymessage .messagecontainer {
+  background-color: #6b8afd !important;
+}
+.mymessage .messagecontainer .youword {
+  font-size: 10px;
+  margin-left: 5px;
+  padding: 0 4px;
+  line-height: 1.5;
+  vertical-align: text-bottom;
+}
+
+.message:not(.samePersonMessage) .messagecontainer::before {
+  position: absolute;
+  bottom: 0;
+  width: 26px;
+  height: 20px;
+}
+.message:not(.samePersonMessage) .messagecontainer::before {
+  content: url("../../../../assets/imgs/mess-light.svg");
+  left: -14px;
+}
+.mymessage:not(.samePersonMessage) .messagecontainer::before {
+  content: url("../../../../assets/imgs/mess-corner.svg") !important;
+  left: auto;
+  right: -14px;
+}
+
+.message .messagecontainer .name {
+  font-size: 15px !important;
+  line-height: 1 !important;
+  text-transform: capitalize;
+}
+
+.mymessage .messagecontainer .name,
+.mymessage .messagecontainer .messagetext,
+.mymessage .messagecontainer .time {
+  color: white;
+}
+
+.message .messagecontainer .messagetext {
+  margin-top: 5px !important;
+  margin-bottom: 8px !important;
+  line-height: 1.3 !important;
+  display: inline !important;
+}
+
+.message .messagecontainer .right {
+  text-align: right;
+}
+
+.message .messagecontainer .right .time {
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/* NOTE dark theme */
+.dark-theme .message .messagecontainer {
+  background-color: var(--dark-bg);
+}
+.dark-theme .message:not(.samePersonMessage) .messagecontainer::before {
+  content: url("../../../../assets/imgs/mess-dark.svg");
+}
