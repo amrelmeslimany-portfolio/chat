@@ -92,21 +92,30 @@ const register = async (req, res) => {
 
 // Logout
 const logout = (req = request, res = response) => {
-  res.clearCookie(tokenName).status(200).json("Logged out successfull");
+  res
+    .clearCookie(tokenName, cookieOptions)
+    .status(200)
+    .json("Logged out successfull");
 };
 
 // Check login
 const checkLogin = async (req = request, res = response) => {
   const token = req.cookies?.token;
-  if (!token || token == "")
+  if (!token || token == "" || !Boolean(token))
     return res
       .clearCookie(tokenName, cookieOptions)
       .status(401)
       .json("User not logged in");
+  console.log("Checklogin Cookies", token);
   try {
     const decoded = verifyJWT(token);
     const user = await User.findById(decoded.id);
-    if (!user) throw Error("No Logged in user");
+    if (!user) {
+      return res
+        .clearCookie(tokenName, cookieOptions)
+        .status(401)
+        .json("No logged in user");
+    }
     // Sending the response
     const { password, ...sendUser } = user._doc;
     sendUser.fullname = `${sendUser.firstname} ${sendUser.lastname}`;
