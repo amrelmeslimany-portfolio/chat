@@ -39,4 +39,5 @@
 
 .btn-send {
   align-self: flex-end;
+  flex-shrink: 0;
 }

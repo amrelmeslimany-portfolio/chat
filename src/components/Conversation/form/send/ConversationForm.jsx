@@ -7,8 +7,8 @@ import { sendMessageThunk } from "../../../../store/conversations/conversationsT
 import { filterMessage, handleTypingTime } from "../../../../utils/functions";
 import { addMessage } from "../../../../store/conversations/conversationSlice";
 import EmojiPicker from "./EmojiPicker";
-import "./ConversationForm.css";
 import { socket } from "../../../../constants/socket-client";
+import "./ConversationForm.css";
 
 const ConversationForm = ({ getHeight, chat }) => {
   const dispatch = useDispatch();

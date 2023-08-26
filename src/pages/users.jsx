@@ -31,7 +31,7 @@ const Users = () => {
         counter={
           status === STATUS.success
             ? numberWithZero(users.users?.length)
-            : "error"
+            : "empty"
         }
       />
       <SwirchUsers />
@@ -51,17 +51,15 @@ const Users = () => {
                     user={{ ...user, isOnline: onlines.includes(user._id) }}
                   />
                 ))}
-              {users.users?.length === 0 && (
-                <AuthRoutesAnimation>
-                  <Empty
-                    description="No users"
-                    image={<img src={EmptyList} />}
-                  />
-                </AuthRoutesAnimation>
-              )}
             </AnimatePresence>
           </List>
         </>
+      )}
+
+      {users.users?.length === 0 && (
+        <AuthRoutesAnimation>
+          <Empty description="No users" image={<img src={EmptyList} />} />
+        </AuthRoutesAnimation>
       )}
     </>
   );
