@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional eslint cache
+.eslintcache
+
+# Optional Editor directories and files
+.vscode/
+.idea/
+
+# Optional JSHint configuration file
+.jshintrc
+
+# Optional Dev Tools files
+devtools/
+
+# Output of npm CLI
+npm-debug.log*
+
+# Yarn Integrity file
+.yarn-integrity
+
+.env
