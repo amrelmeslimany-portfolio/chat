@@ -2,17 +2,19 @@ import { motion } from "framer-motion";
 import { Avatar, Button, Modal, Tag, Typography } from "antd";
 import { ClockCircleOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { deleteMessageThunk } from "../../../../store/conversations/conversationsThunks";
+import { toast } from "react-toastify";
+import { TypingSVG } from "../../../../constants/images";
+import { socket } from "../../../../constants/socket-client";
+import { useMediaQuery } from "react-responsive";
+import "./Message.css";
 import {
   handleDate,
   hasArabicCharacters,
   truncateText,
 } from "../../../../utils/functions";
-import { useState } from "react";
-import { deleteMessageThunk } from "../../../../store/conversations/conversationsThunks";
-import { toast } from "react-toastify";
-import "./Message.css";
-import { TypingSVG } from "../../../../constants/images";
-import { socket } from "../../../../constants/socket-client";
+import { MAX576 } from "../../../../constants/breakpoints";
 
 const Message = ({ message, friend, isTyping }) => {
   const dispatch = useDispatch();
@@ -21,6 +23,7 @@ const Message = ({ message, friend, isTyping }) => {
   const [loading, setLoading] = useState(false);
   const [isMore, setIsMore] = useState(false);
   const [modal, modalCNTX] = Modal.useModal();
+  const is576 = useMediaQuery(MAX576);
 
   const classNameMessage = `message ${isMyMessage ? " mymessage" : ""} ${
     isNextSame ? "samePersonMessage" : ""
@@ -70,7 +73,7 @@ const Message = ({ message, friend, isTyping }) => {
       onDragEnd={onDragMessage}
     >
       {modalCNTX}
-      {!isNextSame && (
+      {!isNextSame && !is576 && (
         <Avatar
           className={`avatar nodark`}
           src={isMyMessage ? profileImg : friend.profileImg}

@@ -101,3 +101,12 @@
 .dark-theme .message:not(.samePersonMessage) .messagecontainer::before {
   content: url("../../../../assets/imgs/mess-dark.svg");
 }
+
+@media (max-width: 576px) {
+  .message.samePersonMessage .messagecontainer {
+    margin-inline-start: 0 !important;
+  }
+  .message.mymessage.samePersonMessage .messagecontainer {
+    margin-inline-end: 0 !important;
+  }
+}

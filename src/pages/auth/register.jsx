@@ -3,11 +3,13 @@ import { AuthChatImg } from "../../constants/images";
 import classes from "./login.module.css";
 import FormScroller from "../../components/Auth/FormScroller";
 import RegisterForm from "../../components/Auth/register/registerForm";
+import useDocHeight from "../../hooks/useDocHeight";
 
 const Register = () => {
+  const docHeight = useDocHeight();
   return (
     <AuthRoutesAnimation>
-      <div className={classes.auth_layout}>
+      <div className={classes.auth_layout} style={{ height: docHeight }}>
         <div className={classes.imgcover}>
           <img src={AuthChatImg} alt="cover" />
         </div>

@@ -14,6 +14,7 @@ import { useMediaQuery } from "react-responsive";
 import { MAX640, MAX992 } from "../../constants/breakpoints";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeftOutlined } from "@ant-design/icons";
+import useDocHeight from "../../hooks/useDocHeight";
 
 const LAYOUT = {
   labelCol: { sm: { span: 4 } },
@@ -28,6 +29,7 @@ const LAYOUT = {
 const EditProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const docHeight = useDocHeight();
   const [loading, setLoading] = useState(false);
   const { user } = useSelector((state) => state.auth);
   const { token } = theme.useToken();
@@ -73,9 +75,9 @@ const EditProfile = () => {
       <HelmetWrap title={`${user.fullname || user.fullName}'s Edit Profile`} />
       <ScrollWrapper
         ref={parentRef}
-        maxHeight={is992 && "calc(100vh - 52px)"}
+        maxHeight={is992 && docHeight - 52}
         style={{
-          minHeight: is992 ? "calc(100vh - 52px)" : "100vh",
+          minHeight: is992 ? docHeight - 52 : "100vh",
         }}
       >
         <div style={{ display: "flex" }}>

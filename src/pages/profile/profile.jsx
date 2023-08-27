@@ -10,15 +10,17 @@ import HelmetWrap from "../../components/UI/HelmetWrap";
 import { useMediaQuery } from "react-responsive";
 import classes from "./profile.module.css";
 import { MAX992 } from "../../constants/breakpoints";
+import useDocHeight from "../../hooks/useDocHeight";
 
 const Profile = () => {
   const { user } = useSelector((state) => state.auth);
   const is992 = useMediaQuery(MAX992);
+  const docHeight = useDocHeight();
   return (
     <>
       <HelmetWrap title={`${user.fullname || user.fullName}'s Profile`} />
       <ScrollWrapper
-        maxHeight={is992 && "calc(100vh - 52px)"}
+        maxHeight={is992 && docHeight - 52}
         style={{ padding: 15 }}
       >
         <div className={classes.profileWrapp}>

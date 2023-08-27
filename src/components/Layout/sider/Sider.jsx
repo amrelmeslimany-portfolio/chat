@@ -13,10 +13,12 @@ import { MAX992 } from "../../../constants/breakpoints";
 import SiderMenu from "./SiderMenu";
 import { motion } from "framer-motion";
 import classes from "./Sider.module.css";
+import useDocHeight from "../../../hooks/useDocHeight";
 
 const Sider = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const docHeight = useDocHeight();
   const { user } = useSelector((state) => state.auth);
   const [collapsedWidth, setCollapsedWidth] = useState(80);
   const { darkMode, isSiderOpen } = useSelector((state) => state.global);
@@ -35,6 +37,7 @@ const Sider = () => {
       <ScrollWrapper>
         <Layout.Sider
           className={classes.ant_layout_sider}
+          style={{ minHeight: docHeight - 72 - 50 }}
           collapsed
           collapsedWidth={isSiderOpen ? 80 : collapsedWidth}
         >
