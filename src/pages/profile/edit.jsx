@@ -73,9 +73,9 @@ const EditProfile = () => {
       <HelmetWrap title={`${user.fullname || user.fullName}'s Edit Profile`} />
       <ScrollWrapper
         ref={parentRef}
-        maxHeight={is992 && "calc(100dvh - 52px)"}
+        maxHeight={is992 && "calc(100vh - 52px)"}
         style={{
-          minHeight: is992 ? "calc(100dvh - 52px)" : "100dvh",
+          minHeight: is992 ? "calc(100vh - 52px)" : "100vh",
         }}
       >
         <div style={{ display: "flex" }}>

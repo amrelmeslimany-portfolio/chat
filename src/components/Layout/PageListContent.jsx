@@ -17,7 +17,7 @@ const PageListContent = ({ is640 }) => {
     <AuthRoutesAnimation style={{ width: is640 && "100%" }}>
       {isTablet && <TopNavbar width={parentWidth} />}
       <ScrollWrapper
-        maxHeight={isTablet && "calc(100dvh - 52px)"}
+        maxHeight={isTablet && "calc(100vh - 52px)"}
         style={{
           backgroundColor: token.colorBgContainer,
           width: parentWidth,

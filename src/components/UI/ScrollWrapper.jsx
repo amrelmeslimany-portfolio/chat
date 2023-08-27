@@ -7,7 +7,7 @@ const ScrollWrapper = forwardRef(
     return (
       <Simplebar
         ref={ref}
-        style={{ maxHeight: maxHeight || "100dvh", ...style }}
+        style={{ maxHeight: maxHeight || "100vh", ...style }}
         {...others}
       >
         {children}

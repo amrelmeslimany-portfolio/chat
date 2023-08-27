@@ -18,7 +18,7 @@ const Profile = () => {
     <>
       <HelmetWrap title={`${user.fullname || user.fullName}'s Profile`} />
       <ScrollWrapper
-        maxHeight={is992 && "calc(100dvh - 52px)"}
+        maxHeight={is992 && "calc(100vh - 52px)"}
         style={{ padding: 15 }}
       >
         <div className={classes.profileWrapp}>

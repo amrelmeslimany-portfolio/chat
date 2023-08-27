@@ -25,7 +25,7 @@ const GlobalLoading = () => {
         justifyContent: "center",
         alignItems: "center",
         position: "fixed",
-        height: "100dvh",
+        height: "100%",
         width: "100%",
         zIndex: 99999,
         top: 0,

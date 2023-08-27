@@ -1,4 +1,4 @@
-import { Empty, List } from "antd";
+import { Empty, List, Result } from "antd";
 import DividerCounter from "../components/UI/DividerCounter";
 import UserItem from "../components/Users/user/UserItem";
 import { useDispatch, useSelector } from "react-redux";
