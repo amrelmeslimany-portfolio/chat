@@ -87,7 +87,7 @@ const EditProfile = () => {
             {...LAYOUT}
             style={{
               flex: 1,
-              padding: "1% 20px",
+              padding: "1% 20px 4%",
               background: token.colorBgContainer,
             }}
           >

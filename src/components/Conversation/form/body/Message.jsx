@@ -55,22 +55,25 @@ const Message = ({ message, friend, isTyping }) => {
       .finally(() => setLoading(false));
   };
 
-  const drags = {
-    drag: "x",
-    dragTransition: { bounceStiffness: 600, bounceDamping: 20 },
-    dragConstraints: { right: 10, left: 0 },
-    dragElastic: { right: 0, left: 0.08 },
-    dragSnapToOrigin: true,
+  const ANIMATION = {
+    init: {
+      y: 10,
+      opacity: 0,
+    },
+    enter: {
+      y: 0,
+      opacity: 1,
+    },
   };
 
   return (
     <motion.div
-      {...(isMyMessage && drags)}
+      variants={ANIMATION}
       initial="init"
       whileInView="enter"
       viewport={{ once: true }}
       className={classNameMessage}
-      onDragEnd={onDragMessage}
+      onDoubleClick={onDragMessage}
     >
       {modalCNTX}
       {!isNextSame && !is576 && (
