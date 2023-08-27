@@ -8,9 +8,6 @@ const ScrollWrapper = forwardRef(
     const docHeight = useDocHeight();
     return (
       <Simplebar
-        className={`${others.className ? others.className : ""} ${
-          classes.scrollPhonesScreen
-        }`}
         ref={ref}
         style={{ maxHeight: maxHeight || docHeight, ...style }} // "100vh"
         {...others}
