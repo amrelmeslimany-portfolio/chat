@@ -95,7 +95,7 @@ const conversationsSlice = createSlice({
           ({ _id }) => action.payload._id === _id
         );
         if (
-          !state.currentMessages[currentIndex].isNextSame &&
+          !state.currentMessages[currentIndex]?.isNextSame &&
           state.currentMessages.length > 1
         ) {
           const previousItem = state.currentMessages[currentIndex - 1];

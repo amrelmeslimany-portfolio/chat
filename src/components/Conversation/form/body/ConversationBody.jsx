@@ -46,6 +46,7 @@ const ConversationBody = ({ formHeight, chat }) => {
       else setIsTyping(data.isType);
     });
     socket.on("receive message", ({ message }) => {
+      console.log("One or two ");
       if (chat.id === message.conversationID) {
         dispatch(
           addMessage({
@@ -97,8 +98,12 @@ const ConversationBody = ({ formHeight, chat }) => {
         {chat.isMessage &&
           !loading &&
           !error &&
-          messages.map((msg) => (
-            <Message key={msg._id} message={msg} friend={chat.friend} />
+          messages.map((msg, index) => (
+            <Message
+              key={`${msg._id}-${msg.createdAt}`}
+              message={msg}
+              friend={chat.friend}
+            />
           ))}
 
         <AnimatePresence mode="wait">

@@ -64,12 +64,18 @@ const Message = ({ message, friend, isTyping }) => {
       y: 0,
       opacity: 1,
     },
+    exit: {
+      y: -10,
+      opacity: 0,
+    },
   };
 
   return (
     <motion.div
       variants={ANIMATION}
       initial="init"
+      animate="enter"
+      exit="exit"
       whileInView="enter"
       viewport={{ once: true }}
       className={classNameMessage}
